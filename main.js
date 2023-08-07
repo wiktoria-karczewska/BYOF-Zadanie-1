@@ -1,13 +1,25 @@
 import "./style.css";
+import { getProducts } from "./getProducts.js";
+import { createCategories } from "./createCategories.js";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+export let allProducts = [];
+
+getProducts().then((products) => {
+  allProducts = products;
+});
+
+async function getCategories() {
+  const response = await fetch(
+    "https://api-eko-bazarek.azurewebsites.net/api/products/types"
+  );
+  const categories = await response.json();
+  return categories;
+}
+
+async function createSideMenu() {
+  const categories = await getCategories();
+  const parentElement = document.getElementById("types");
+  createCategories(categories, parentElement);
+}
+
+createSideMenu();
