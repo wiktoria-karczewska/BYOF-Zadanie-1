@@ -2,14 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.svg" />
+
+    <title>Eko bazarek</title>
   </head>
   <body>
     <div id="app">
-      <div id="types"></div>
-      <div id="products"></div>
+      <nav id="types"><span>Typy</span></nav>
+      <article id="products"><span>Kategorie</span></article>
+      <footer id="footer">
+        <span
+          >App icons by
+          <a href="https://icons8.com/license" target="_blank" rel="noopener"
+            >icons8</a
+          ></span
+        >
+        <p id="copyright">
+          &copy;&nbsp;<span id="currentYear"></span>&nbsp;Wiktoria Karczewska
+        </p>
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

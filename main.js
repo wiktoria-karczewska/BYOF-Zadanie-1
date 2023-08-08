@@ -1,6 +1,7 @@
 import "./style.css";
 import { getProducts } from "./getProducts.js";
 import { createCategories } from "./createCategories.js";
+import { getFullYear } from "./getFullYear";
 
 export let allProducts = [];
 
@@ -23,3 +24,5 @@ async function createSideMenu() {
 }
 
 createSideMenu();
+
+getFullYear();
