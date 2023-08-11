@@ -1,4 +1,5 @@
 import { allProducts } from "./main.js";
+
 export function createProducts(event) {
   const productType = event.target.id;
 
@@ -14,6 +15,10 @@ export function createProducts(event) {
     productItem.setAttribute("id", product.id);
     productItem.innerHTML = product.name;
 
+    const productItemImage = document.createElement("img");
+    productItemImage.setAttribute("src", product.iconUrl);
+
+    productItem.appendChild(productItemImage);
     productsList.appendChild(productItem);
   });
 
