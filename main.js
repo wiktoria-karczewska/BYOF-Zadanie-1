@@ -5,10 +5,12 @@ import { getFullYear } from "./getFullYear";
 
 export let allProducts = [];
 
+// Przypisanie wszystkich informacji o kategoriach z API do tablicy
 getProducts().then((products) => {
   allProducts = products;
 });
 
+// Wczytanie informacji o typach z API
 async function getCategories() {
   const response = await fetch(
     "https://api-eko-bazarek.azurewebsites.net/api/products/types"
@@ -17,6 +19,7 @@ async function getCategories() {
   return categories;
 }
 
+// Stworzenie listy (nawiga)
 async function createSideMenu() {
   const categories = await getCategories();
   const parentElement = document.getElementById("types");

@@ -37,7 +37,8 @@ footer span {
 nav {
 }
 
-nav span {
+nav span,
+article span {
   display: inline-block;
   padding: 1.2rem 10.8rem 1.2rem 1.6rem;
 }
@@ -78,11 +79,20 @@ article ul {
 }
 
 article li {
-  display: flex;
-  justify-content: center;
+  display: grid;
   list-style: none;
   height: 16rem;
   width: 16rem;
   border-radius: 1.5rem;
   background-color: #ffffff;
+  margin: 1.6rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+
+article ul li img {
+  width: 6.4rem;
+  height: 6.4rem;
+  order: -1;
 }
