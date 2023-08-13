@@ -3,6 +3,8 @@ import "./style.css";
 import { getProducts } from "./getProducts.js";
 import { createCategories } from "./createCategories.js";
 import { getFullYear } from "./getFullYear";
+import { createAllProducts } from "./createAllProducts.js";
+import { buttonColor } from "./buttonColor.js";
 
 export let allProducts = [];
 
@@ -20,15 +22,21 @@ async function getCategories() {
   return categories;
 }
 
-// Stworzenie listy (nawiga)
-async function createSideMenu() {
+// Stworzenie listy (nawigacji i produktów)
+async function createStartContent() {
   const categories = await getCategories();
   const parentElement = document.getElementById("types");
   createCategories(categories, parentElement);
+
+  createAllProducts();
+
+  buttonColor();
 }
 
-createSideMenu();
+createStartContent();
+
+document.addEventListener("DOMContentLoaded", () => {
+  createAllProducts();
+});
 
 getFullYear();
-
-sortByName();

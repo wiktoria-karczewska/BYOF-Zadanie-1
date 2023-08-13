@@ -12,14 +12,14 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f6f5f1;
   color: #000000;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.4rem;
 }
 
 #app {
   padding: 6.4rem 25.6rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 16rem auto;
   position: relative;
 }
 
@@ -31,16 +31,12 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-footer span {
-}
-
 nav {
   display: flex;
   flex-direction: column;
 }
 
-nav span,
-article span {
+.desc {
   display: inline-block;
   padding: 1.2rem 10.8rem 1.2rem 1.6rem;
 }
@@ -72,29 +68,81 @@ nav li:focus {
   background-color: #def2dd;
 }
 
-nav button {
+nav .checkbox {
   order: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #004040;
 }
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 4.2rem;
+  height: 2.6rem;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dedede;
+  transition: 0.4s;
+  border-radius: 13px;
+}
+
+.checkbox-icon {
+  z-index: 5;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8rem;
+  width: 1.8rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8bc34a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.7rem);
+}
+
 article {
   margin-left: 1.6rem;
+  justify-content: center;
 }
 
 article ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 article li {
-  display: grid;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   height: 16rem;
   width: 16rem;
-  border-radius: 1.5rem;
-  background-color: #ffffff;
-  margin: 1.6rem;
   justify-content: center;
-  align-content: center;
-  justify-items: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 0.8rem;
+  border-radius: 1.5rem;
 }
 
 article ul li img {

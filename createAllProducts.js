@@ -1,18 +1,13 @@
+import { getProducts } from "./getProducts.js";
 import { allProducts } from "./main.js";
 import { sortByName } from "./sortByName.js";
 
-export function createProducts(event) {
-  sortByName();
-  const productType = event.target.id;
-
-  const filteredByType = allProducts.filter((product) => {
-    return productType === product.type;
-  });
-  console.log(filteredByType);
+export function createAllProducts() {
+  getProducts();
 
   const productsList = document.createElement("ul");
 
-  filteredByType.forEach((product) => {
+  allProducts.forEach((product) => {
     const productItem = document.createElement("li");
     productItem.setAttribute("id", product.id);
     productItem.innerHTML = product.name;
@@ -22,10 +17,14 @@ export function createProducts(event) {
 
     productItem.appendChild(productItemImage);
     productsList.appendChild(productItem);
+
+    console.log(productItem, productItemImage);
   });
 
   const parentElement = document.getElementById("products");
 
   parentElement.innerHTML = "";
   parentElement.appendChild(productsList);
+
+  sortByName();
 }

@@ -1,4 +1,4 @@
-// Wczytywanie wszystkich informacji o kategoraich z API (id, name, type, url)
+import { createAllProducts } from "./createAllProducts";
 
 export async function getProducts() {
   const response = await fetch(
