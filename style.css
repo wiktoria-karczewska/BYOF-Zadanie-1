@@ -36,7 +36,8 @@ nav {
   flex-direction: column;
 }
 
-.desc {
+nav span,
+article span {
   display: inline-block;
   padding: 1.2rem 10.8rem 1.2rem 1.6rem;
 }
@@ -143,6 +144,10 @@ article li {
   background-color: #ffffff;
   margin: 0.8rem;
   border-radius: 1.5rem;
+  margin: 1.6rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
 }
 
 article ul li img {

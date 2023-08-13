@@ -24,6 +24,13 @@ export function createProducts(event) {
     productsList.appendChild(productItem);
   });
 
+  // filteredByType.forEach((product) => {
+  //   const productItemImage = productItem.createElement("img");
+  //   productItemImage.setAttribute("src", product.iconUrl);
+
+  //   productItem.appendChild(productItemImage);
+  // });
+
   const parentElement = document.getElementById("products");
 
   parentElement.innerHTML = "";
