@@ -4,7 +4,8 @@ import { getProducts } from "./getProducts.js";
 import { createCategories } from "./createCategories.js";
 import { getFullYear } from "./getFullYear";
 import { createAllProducts } from "./createAllProducts.js";
-import { buttonColor } from "./buttonColor.js";
+import { createVegeProducts } from "./createVegeProducts.js";
+import { changeButtonColor } from "./changeButtonColor.js";
 
 export let allProducts = [];
 
@@ -28,15 +29,13 @@ async function createStartContent() {
   const parentElement = document.getElementById("types");
   createCategories(categories, parentElement);
 
+  sortByName();
+
   createAllProducts();
 
-  buttonColor();
+  changeButtonColor();
 }
 
 createStartContent();
-
-document.addEventListener("DOMContentLoaded", () => {
-  createAllProducts();
-});
 
 getFullYear();

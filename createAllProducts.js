@@ -17,8 +17,6 @@ export function createAllProducts() {
 
     productItem.appendChild(productItemImage);
     productsList.appendChild(productItem);
-
-    console.log(productItem, productItemImage);
   });
 
   const parentElement = document.getElementById("products");

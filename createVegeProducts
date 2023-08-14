@@ -1,8 +1,0 @@
-import { allProducts } from "./main.js";
-import { sortByName } from "./sortByName.js";
-
-export function createVegeProducts(event) {
-  sortByName();
-
-  const productVege = event.t;
-}

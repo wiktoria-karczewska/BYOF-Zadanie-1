@@ -39,7 +39,7 @@ nav {
 nav span,
 article span {
   display: inline-block;
-  padding: 1.2rem 10.8rem 1.2rem 1.6rem;
+  padding: 1.2rem 0rem 1.2rem 1.6rem;
 }
 
 nav li {
