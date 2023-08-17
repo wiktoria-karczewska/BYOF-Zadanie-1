@@ -6,6 +6,7 @@ import { getFullYear } from "./getFullYear";
 import { createAllProducts } from "./createAllProducts.js";
 import { createVegeProducts } from "./createVegeProducts.js";
 import { changeButtonColor } from "./changeButtonColor.js";
+import { makeApiCall } from "./api/makeApiCall.js";
 
 export let allProducts = [];
 
@@ -14,10 +15,7 @@ getProducts().then((products) => {
 });
 
 async function getCategories() {
-  const response = await fetch(
-    "https://api-eko-bazarek.azurewebsites.net/api/products/types"
-  );
-  const categories = await response.json();
+  const categories = await makeApiCall("products/types");
   return categories;
 }
 
