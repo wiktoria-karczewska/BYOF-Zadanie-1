@@ -1,7 +1,5 @@
-export function changeButtonColor() {
-  const button = document.querySelector(".button");
+const button = document.querySelector(".button");
 
-  button.addEventListener("click", function onClick() {
-    button.style.backgroundColor = "#46AA42";
-  });
+export function changeButtonColor() {
+  button.style.backgroundColor = "#46AA42";
 }

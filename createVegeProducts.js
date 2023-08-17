@@ -1,8 +1,8 @@
-import { allProducts } from "./main";
 import { sortByName } from "./sortByName";
+import { allProducts } from "./main";
 
 export function createVegeProducts(product) {
-  sortByName();
+  sortByName(allProducts);
   const productType = product.type;
 
   const filteredVege = allProducts.filter((product) => {

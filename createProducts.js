@@ -2,7 +2,7 @@ import { allProducts } from "./main.js";
 import { sortByName } from "./sortByName.js";
 
 export function createProducts(event) {
-  sortByName();
+  sortByName(allProducts);
   const productType = event.target.id;
 
   const filteredByType = allProducts.filter((product) => {

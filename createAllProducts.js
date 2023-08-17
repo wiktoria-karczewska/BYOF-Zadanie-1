@@ -24,5 +24,5 @@ export function createAllProducts() {
   parentElement.innerHTML = "";
   parentElement.appendChild(productsList);
 
-  sortByName();
+  sortByName(allProducts);
 }
