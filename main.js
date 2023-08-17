@@ -5,7 +5,7 @@ import { createCategories } from "./createCategories.js";
 import { getFullYear } from "./getFullYear";
 import { createAllProducts } from "./createAllProducts.js";
 import { createVegeProducts } from "./createVegeProducts.js";
-import { changeButtonColor } from "./changeButtonColor.js";
+import { changeElementColor } from "./changeElementColor.js";
 import { makeApiCall } from "./api/makeApiCall.js";
 
 export let allProducts = [];
